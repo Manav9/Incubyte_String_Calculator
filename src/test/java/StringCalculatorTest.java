@@ -41,4 +41,11 @@ public class StringCalculatorTest {
         String numbers = "1,2";
         Assert.assertEquals(3,stringCalculator.Add(numbers));
     }
+
+    // Unknown amount of value test.
+    @Test
+    public void returnSumOfUnknownValuesOnUnknownValueString(){
+        String numbers = "1,2,3,4,5,6";
+        Assert.assertEquals(21,stringCalculator.Add(numbers));
+    }
 }
