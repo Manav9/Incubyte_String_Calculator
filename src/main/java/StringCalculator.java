@@ -16,7 +16,10 @@ public class StringCalculator {
         }
         else if (numbers.contains(",")){
             value = numbers.split(",");
-            sum =  Integer.parseInt(value[0]) + Integer.parseInt(value[1]);
+            for (int i = 0; i < value.length; i++){
+                sum =  sum + Integer.parseInt(value[i]);
+            }
+
         }
         else {
             sum = Integer.parseInt(numbers);
