@@ -49,6 +49,7 @@ public class StringCalculatorTest {
         Assert.assertEquals(21,stringCalculator.Add(numbers));
     }
 
+    // Values separated by comma and new line test.
     @Test
     public void returnSumOfUnknownValuesOnUnknownValuesSeparatedByNewLine(){
         String numbers = "1,2\n3";

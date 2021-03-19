@@ -20,7 +20,7 @@ public class StringCalculator {
         // Check if String is comma separated.
         else if (numbers.contains(",")){
 
-            // Split the string into individual numbers by comma.
+            // Replace "\n" if present to "," and then split the String by comma.
             value = numbers.replace("\n",",").split(",");
 
             // Sum up the numbers.
