@@ -23,6 +23,6 @@ public class StringCalculatorTest {
     public void returnSameValueOnOneValueString(){
         String numbers = "1";
         StringCalculator stringCalculator = new StringCalculator();
-        Assert.assertEquals(1,stringCalculator.Add(numbers));
+        Assert.assertEquals(Integer.parseInt(numbers),stringCalculator.Add(numbers));
     }
 }
