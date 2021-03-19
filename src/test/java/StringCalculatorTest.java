@@ -12,9 +12,8 @@ import org.junit.Test;
 
 public class StringCalculatorTest {
 
-
     @Test
-    public void emptyString(){
+    public void returnZeroOnEmptyString(){
         String numbers = "";
         StringCalculator stringCalculator = new StringCalculator();
         Assert.assertEquals(0,stringCalculator.Add(numbers));
