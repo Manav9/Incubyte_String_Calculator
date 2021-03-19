@@ -48,4 +48,10 @@ public class StringCalculatorTest {
         String numbers = "1,2,3,4,5,6";
         Assert.assertEquals(21,stringCalculator.Add(numbers));
     }
+
+    @Test
+    public void returnSumOfUnknownValuesOnUnknownValuesSeparatedByNewLine(){
+        String numbers = "1,2\n3";
+        Assert.assertEquals(6,stringCalculator.Add(numbers));
+    }
 }
