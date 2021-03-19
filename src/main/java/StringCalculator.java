@@ -30,6 +30,14 @@ public class StringCalculator {
 
         }
 
+        else if (numbers.startsWith("//")){
+            char delimiter = numbers.charAt(2);
+            value = numbers.substring(5).replace("\n",",").split(String.valueOf(delimiter));
+            for (int i = 0; i < value.length; i++){
+                sum =  sum + Integer.parseInt(value[i]);
+            }
+        }
+
         // String is single valued set sum to given value.
         else {
             sum = Integer.parseInt(numbers);
