@@ -23,19 +23,13 @@ public class StringCalculator {
             // Replace "\n" if present to "," and then split the String by comma.
             value = numbers.replace("\n",",").split(",");
 
-            // Sum up the numbers.
-            for (int i = 0; i < value.length; i++){
-                sum =  sum + Integer.parseInt(value[i]);
-            }
-
+            sum = addNumbers(value);
         }
 
         else if (numbers.startsWith("//")){
             char delimiter = numbers.charAt(2);
             value = numbers.substring(5).replace("\n",",").split(String.valueOf(delimiter));
-            for (int i = 0; i < value.length; i++){
-                sum =  sum + Integer.parseInt(value[i]);
-            }
+            sum = addNumbers(value);
         }
 
         // String is single valued set sum to given value.
@@ -45,4 +39,14 @@ public class StringCalculator {
         return sum;
     }
 
+    // Returns sum of all numbers.
+    public int addNumbers(String[] value){
+        int sum = 0;
+
+        // Sum up the numbers.
+        for (int i = 0; i < value.length; i++){
+            sum =  sum + Integer.parseInt(value[i]);
+        }
+        return sum;
+    }
 }

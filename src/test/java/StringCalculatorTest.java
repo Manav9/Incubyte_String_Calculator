@@ -56,6 +56,7 @@ public class StringCalculatorTest {
         Assert.assertEquals(6,stringCalculator.Add(numbers));
     }
 
+    // Different delimiters test.
     @Test
     public void  returnSumOfUnknownValuesOnDifferentDelimiters(){
         String numbers = "//;\\n1;2";
