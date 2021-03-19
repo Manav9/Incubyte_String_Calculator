@@ -13,6 +13,9 @@ public class StringCalculator {
         if (numbers.isEmpty()){
             sum = 0;
         }
+        else {
+            sum = Integer.parseInt(numbers);
+        }
         return sum;
     }
 
