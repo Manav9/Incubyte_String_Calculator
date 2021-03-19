@@ -25,4 +25,11 @@ public class StringCalculatorTest {
         StringCalculator stringCalculator = new StringCalculator();
         Assert.assertEquals(Integer.parseInt(numbers),stringCalculator.Add(numbers));
     }
+
+    @Test
+    public void returnSumOfTwoValuesOnTwoValueString(){
+        String numbers = "1,2";
+        StringCalculator stringCalculator = new StringCalculator();
+        Assert.assertEquals(3,stringCalculator.Add(numbers));
+    }
 }
