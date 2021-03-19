@@ -21,7 +21,7 @@ public class StringCalculator {
         else if (numbers.contains(",")){
 
             // Split the string into individual numbers by comma.
-            value = numbers.split(",");
+            value = numbers.replace("\n",",").split(",");
 
             // Sum up the numbers.
             for (int i = 0; i < value.length; i++){
