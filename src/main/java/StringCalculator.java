@@ -7,8 +7,13 @@
 
 public class StringCalculator {
 
-    public int Add(String numbers){
-        return 0;
+    public int Add(String numbers)
+    {
+        int sum = 0;
+        if (numbers.isEmpty()){
+            sum = 0;
+        }
+        return sum;
     }
 
 }
