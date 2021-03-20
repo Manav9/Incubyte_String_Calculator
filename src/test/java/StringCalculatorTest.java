@@ -90,7 +90,7 @@ public class StringCalculatorTest {
     // Number Bigger than 1000 should be ignored.
     @Test
     public void numbersBiggerThan1000ShouldBeIgnored(){
-        String numbers = "1,1001";
-        Assert.assertEquals(1,stringCalculator.Add(numbers));
+        String numbers = "1,1001,2,3";
+        Assert.assertEquals(6,stringCalculator.Add(numbers));
     }
 }

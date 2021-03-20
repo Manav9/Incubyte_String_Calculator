@@ -63,8 +63,9 @@ public class StringCalculator {
         int sum = 0;
         // Sum up the numbers.
         for (String s : value) {
-
-            sum = sum + Integer.parseInt(s);
+            if (Integer.parseInt(s) <1001){
+                sum = sum + Integer.parseInt(s);
+            }
         }
         return sum;
     }
