@@ -63,6 +63,7 @@ public class StringCalculatorTest {
         Assert.assertEquals(3,stringCalculator.Add(numbers));
     }
 
+    // Exception when negative number is passed.
     @Test
     public void returnExceptionAndNegativeValueOnNegativeValueString(){
         try {
@@ -71,6 +72,18 @@ public class StringCalculatorTest {
             Assert.fail();
         }catch (Exception e){
             Assert.assertEquals("negatives not allowed [-1]",e.getMessage());
+        }
+    }
+
+    // Exception when multiple negative numbers are passed.
+    @Test
+    public void returnExceptionAndNegativeValueOnMultipleNegativeValueString(){
+        try {
+            String numbers = "-1,2,-3,4,5,-6,-7";
+            stringCalculator.Add(numbers);
+            Assert.fail();
+        }catch (Exception e){
+            Assert.assertEquals("negatives not allowed [-1, -3, -6, -7]",e.getMessage());
         }
     }
 }
