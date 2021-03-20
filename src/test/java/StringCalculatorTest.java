@@ -62,4 +62,15 @@ public class StringCalculatorTest {
         String numbers = "//;\\n1;2";
         Assert.assertEquals(3,stringCalculator.Add(numbers));
     }
+
+    @Test
+    public void returnExceptionAndNegativeValueOnNegativeValueString(){
+        try {
+            String numbers = "-1,2";
+            stringCalculator.Add(numbers);
+            Assert.fail();
+        }catch (Exception e){
+            Assert.assertEquals("negatives not allowed -1",e.getMessage());
+        }
+    }
 }

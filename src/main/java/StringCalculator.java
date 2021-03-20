@@ -1,7 +1,7 @@
 /**
  * Created by Manav Joshi on 19/03/2021 for Incubyte Technical Assessment.
  *
- * @return Addition of the given numbers.
+ * Addition of the given numbers.
  *
  */
 
@@ -44,8 +44,8 @@ public class StringCalculator {
         int sum = 0;
 
         // Sum up the numbers.
-        for (int i = 0; i < value.length; i++){
-            sum =  sum + Integer.parseInt(value[i]);
+        for (String s : value) {
+            sum = sum + Integer.parseInt(s);
         }
         return sum;
     }
