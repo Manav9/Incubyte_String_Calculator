@@ -36,11 +36,19 @@ public class StringCalculator {
 
         else if (numbers.startsWith("//")){
             if (numbers.contains("[")){
-                int startIndex = numbers.indexOf("[")+1;
-                int endIndex = numbers.indexOf("]");
-                int subStringIndex = numbers.indexOf("\n") + 1;
-                String delimiter = numbers.substring(numbers.indexOf("[")+1,numbers.indexOf("]"));
-                value = numbers.substring(numbers.indexOf("\n") + 1).replace(delimiter,",").split(",");
+                if (numbers.contains("][")){
+                    String[] delimiters = numbers.substring(2,numbers.indexOf("\n")-1).replace("[","")
+                            .replace("]",",").split(",");
+                    String subStringOfNumber = numbers.substring(numbers.indexOf("\n")+1);
+                    for (String a : delimiters){
+                        subStringOfNumber =subStringOfNumber.replace(a,",");
+                    }
+                    value = subStringOfNumber.split(",");
+                }
+                else {
+                    String delimiter = numbers.substring(numbers.indexOf("[")+1,numbers.indexOf("]"));
+                    value = numbers.substring(numbers.indexOf("\n") + 1).replace(delimiter,",").split(",");
+                }
             }
             else {
                 char delimiter = numbers.charAt(2);
