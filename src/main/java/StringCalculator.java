@@ -39,15 +39,14 @@ public class StringCalculator {
                 int startIndex = numbers.indexOf("[")+1;
                 int endIndex = numbers.indexOf("]");
                 int subStringIndex = numbers.indexOf("\n") + 1;
-                String delimiter = numbers.substring(startIndex,endIndex);
-                value = numbers.substring(subStringIndex).replace(delimiter,",").split(",");
-                sum = addNumbers(value);
+                String delimiter = numbers.substring(numbers.indexOf("[")+1,numbers.indexOf("]"));
+                value = numbers.substring(numbers.indexOf("\n") + 1).replace(delimiter,",").split(",");
             }
             else {
                 char delimiter = numbers.charAt(2);
                 value = numbers.substring(5).replace("\n",",").split(String.valueOf(delimiter));
-                sum = addNumbers(value);
             }
+            sum = addNumbers(value);
         }
 
         // String is single valued set sum to given value.

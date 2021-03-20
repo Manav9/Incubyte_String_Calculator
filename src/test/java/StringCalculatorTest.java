@@ -97,7 +97,7 @@ public class StringCalculatorTest {
     // Delimiter of any length should be accepted.
     @Test
     public void delimiterOfAnyLength(){
-        String numbers = "//[***]\n1***2***3";
+        String numbers = "//[*****]\n1*****2*****3";
         Assert.assertEquals(6,stringCalculator.Add(numbers));
     }
 }
