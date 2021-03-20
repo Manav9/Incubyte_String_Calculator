@@ -93,4 +93,11 @@ public class StringCalculatorTest {
         String numbers = "1,1001,2,3";
         Assert.assertEquals(6,stringCalculator.Add(numbers));
     }
+
+    // Delimiter of any length should be accepted.
+    @Test
+    public void delimiterOfAnyLength(){
+        String numbers = "//[***]\n1***2***3";
+        Assert.assertEquals(6,stringCalculator.Add(numbers));
+    }
 }
