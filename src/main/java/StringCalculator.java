@@ -35,9 +35,19 @@ public class StringCalculator {
         }
 
         else if (numbers.startsWith("//")){
-            char delimiter = numbers.charAt(2);
-            value = numbers.substring(5).replace("\n",",").split(String.valueOf(delimiter));
-            sum = addNumbers(value);
+            if (numbers.contains("[")){
+                int startIndex = numbers.indexOf("[")+1;
+                int endIndex = numbers.indexOf("]");
+                int subStringIndex = numbers.indexOf("\n") + 1;
+                String delimiter = numbers.substring(startIndex,endIndex);
+                value = numbers.substring(subStringIndex).replace(delimiter,",").split(",");
+                sum = addNumbers(value);
+            }
+            else {
+                char delimiter = numbers.charAt(2);
+                value = numbers.substring(5).replace("\n",",").split(String.valueOf(delimiter));
+                sum = addNumbers(value);
+            }
         }
 
         // String is single valued set sum to given value.
