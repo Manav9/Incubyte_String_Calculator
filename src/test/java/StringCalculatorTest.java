@@ -100,4 +100,11 @@ public class StringCalculatorTest {
         String numbers = "//[*****]\n1*****2*****3";
         Assert.assertEquals(6,stringCalculator.Add(numbers));
     }
+
+    // Multiple delimiter test
+    @Test
+    public void multipleDelimiterTest(){
+        String numbers = "//[*][%]\n1*2%3";
+        Assert.assertEquals(6,stringCalculator.Add(numbers));
+    }
 }
