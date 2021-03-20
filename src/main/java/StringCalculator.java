@@ -97,6 +97,7 @@ public class StringCalculator {
 
             // Checks if the value is lesser than 1001.
             if (Integer.parseInt(s) <1001){
+
                 sum = sum + Integer.parseInt(s);
             }
         }
