@@ -70,7 +70,7 @@ public class StringCalculatorTest {
             stringCalculator.Add(numbers);
             Assert.fail();
         }catch (Exception e){
-            Assert.assertEquals("negatives not allowed -1",e.getMessage());
+            Assert.assertEquals("negatives not allowed [-1]",e.getMessage());
         }
     }
 }
