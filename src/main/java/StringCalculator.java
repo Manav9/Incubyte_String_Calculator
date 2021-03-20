@@ -35,22 +35,35 @@ public class StringCalculator {
         }
 
         else if (numbers.startsWith("//")){
+
+            // For any size of single delimiter.
             if (numbers.contains("[")){
+
+                // For any multiple delimiter.
                 if (numbers.contains("][")){
+
+                    // Getting delimiters into delimiters[] array.
                     String[] delimiters = numbers.substring(2,numbers.indexOf("\n")-1).replace("[","")
                             .replace("]",",").split(",");
+
+                    // String that contains numbers with multiple delimiters.
                     String subStringOfNumber = numbers.substring(numbers.indexOf("\n")+1);
+
+                    // for loop all delimiters to commas..
                     for (String a : delimiters){
                         subStringOfNumber =subStringOfNumber.replace(a,",");
                     }
                     value = subStringOfNumber.split(",");
                 }
                 else {
+
+                    // getting delimiter from [].
                     String delimiter = numbers.substring(numbers.indexOf("[")+1,numbers.indexOf("]"));
                     value = numbers.substring(numbers.indexOf("\n") + 1).replace(delimiter,",").split(",");
                 }
             }
             else {
+                // getting the single delimiter into char delimiter.
                 char delimiter = numbers.charAt(2);
                 value = numbers.substring(5).replace("\n",",").split(String.valueOf(delimiter));
             }
