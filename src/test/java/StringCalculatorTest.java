@@ -101,10 +101,17 @@ public class StringCalculatorTest {
         Assert.assertEquals(6,stringCalculator.Add(numbers));
     }
 
-    // Multiple delimiter test
+    // Multiple delimiter test.
     @Test
     public void multipleDelimiterTest(){
         String numbers = "//[*][%]\n1*2%3";
+        Assert.assertEquals(6,stringCalculator.Add(numbers));
+    }
+
+    // Any size of multiple delimiter test.
+    @Test
+    public void anySizeOfMultipleDelimiterTest(){
+        String numbers = "//[***][%%]\n1***2%%3";
         Assert.assertEquals(6,stringCalculator.Add(numbers));
     }
 }
