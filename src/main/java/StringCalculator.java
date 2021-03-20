@@ -1,12 +1,12 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Manav Joshi on 19/03/2021 for Incubyte Technical Assessment.
  *
  * Addition of the given numbers.
  *
  */
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StringCalculator {
 
@@ -47,6 +47,7 @@ public class StringCalculator {
         return sum;
     }
 
+    // Returns a list of negative integers present in the string.
     private List<Integer> getNegativeNumbers(String numbers) {
         List<Integer> negativeNumbers = new ArrayList<>();
         String[] values =   numbers.replace("\n",",").split(",");
@@ -63,6 +64,8 @@ public class StringCalculator {
         int sum = 0;
         // Sum up the numbers.
         for (String s : value) {
+
+            // Checks if the value is lesser than 1001.
             if (Integer.parseInt(s) <1001){
                 sum = sum + Integer.parseInt(s);
             }
